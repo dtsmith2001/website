@@ -1,0 +1,176 @@
+<html>
+<head>
+<title>Non-Academic Employment in Finance for New Mathematics Ph.D.'s and Current Students</title>
+<BASE HREF="http://dtsmith.home.mindspring.com/">
+</head>
+<body bgcolor="#FFFFFF"><H1 align=center>Non-Academic Employment in Finance for New Mathematics Ph.D.'s and Current Students</H1>
+
+<br>
+
+<p>I talked about some of the topics on this web page at the AMS Conversation on Non-Academic Employment at the January 2010 Joint Mathematics Meetings in San Francisco, CA. I'll be on the same panel at the January 2013 Joint Mathematics Meetings in San Diego, CA.</p>
+
+<hr />
+
+<h2>Programming</h2>
+
+<p>Every quantitative analyst on Wall Street eventually has to implement a model to price or risk manage a position or portfolio. The skill sets are usually Excel/VBA, C++, C#, SQL, and perhaps a scripting language such as Perl or Python. Don't ignore <a href="http://www.r-project.org">R</a>/S-Plus and Mathematica/Maple/Matlab. I'm going to focus on C++ here as the others are relatively easier to learn. For the basics, see</p>
+
+<ul>
+<li><p><a href="http://www.amazon.com/How-Program-7th-Paul-Deitel/dp/0136117260/ref=sr_1_2?ie=UTF8&s=books&qid=1261941382&sr=8-2">C++ How to Program</a></p></li>
+<li><p><a href="http://www.mindviewinc.com/Books/">Thinking in C++</a>.</p></li></ul>
+
+<p>Other books you should probably read include</p>
+
+<ul>
+<li><p><a href="http://www.amazon.com/Patterns-Derivatives-Pricing-Mathematics-Finance/dp/0521721628/ref=sr_1_1?ie=UTF8&s=books&qid=1261941582&sr=1-1">C++ Design Patterns and Derivatives Pricing</a></p></li>
+<li><p><a href="http://www.amazon.com/Effective-Specific-Improve-Programs-Designs/dp/0321334876/ref=sr_1_1?ie=UTF8&s=books&qid=1261941645&sr=1-1">Effective C++</a></p></li>
+<li><p><a href="http://www.amazon.com/More-Effective-Improve-Programs-Designs/dp/020163371X/ref=pd_bxgy_b_text_b">More Effective C++</a></p></li>
+<li><p><a href="http://www.amazon.com/Effective-STL-Specific-Standard-Template/dp/0201749629/ref=pd_bxgy_b_text_c">Effective STL</a></p></li>
+<li><p><a href="http://www.amazon.com/Introduction-Boost-Libraries-Robert-Demming/dp/9491028014/ref=sr_1_5?s=books&ie=UTF8&qid=1355233571&sr=1-5&keywords=daniel+duffy">Introduction to the Boost C++ Libraries; Volume I - Foundations</a></p></li>
+<li><p><a href="http://www.amazon.com/Introduction-Boost-Libraries-Volume-II/dp/9491028022/ref=pd_bxgy_b_text_y">Introduction to the Boost C++ Libraries; Volume II - Advanced Libraries</a></p></li>
+</ul>
+
+<p>You may not want to read all of these Boost Libraries books, but you should at least be familiar with smart pointers. Here are a few articles with tips to use the Boost library.</p>
+
+<ul>
+<li><p><a href="http://gallery.rcpp.org/articles/timing-normal-rngs/">Random number generation</a></p>
+<li><p><a href="http://gallery.rcpp.org/articles/a-first-boost-example/">First Boost example</a></p>
+<li><p><a href="http://gallery.rcpp.org/articles/a-second-boost-example/">Boost example number two</a></p>
+</ul>
+
+<p>You can always try out a few <a href="http://www.tryfsharp.org/Learn">tutorials on F#</a>, which is popular in some circles.</p>
+
+<p>Here are a few free books to get you started with R.</p>
+
+<ul>
+<li><p><a href="http://cran.r-project.org/doc/contrib/Zhao_R_and_data_mining.pdf">R and Data Mining: Examples and Case Studies</a></p></li>
+<li><p><a href="http://www.rdatamining.com/docs">More on R and Data Mining</a></p></li>
+<li><p><a href="http://blog.revolutionanalytics.com/2011/11/three-free-books-on-r-for-statistics.html">Three Free Books on R</a></p></li>
+<li><p><a href="http://en.wikibooks.org/wiki/R_Programming">R Programming</a> - Wikibooks</a></p></li>
+<li><p><a href="http://www.graphpad.com/support/faqid/1406/">The Pros and Cons of Using Excel for Statistical Calculations</a> Ok, it's not about R, but you should know these things</p></li>
+<li><p><a href="http://www.cookbook-r.com/">Cookbook R</a></p></li>
+<li><p><a href="http://cran.r-project.org/doc/contrib/Owen-TheRGuide.pdf">The R Guide</a></p></li>
+<li><p><a href="http://www.r-statistics.com/2009/10/free-statistics-e-books-for-download/">Free Statistics Books</a></p></li>
+</ul>
+
+<p><strong>Be sure you get the latest editions of any books mentioned on this web page.</strong></p>
+
+<hr />
+
+<h2>Modeling and Data</h2>
+
+<p>Most of your time will be spent dealing with data quality and cleaning datasets. This is the single most important step of the modeling process, and may account for over 90% of the time you spend developing a model. Unmodeled effects can also introduce uncertainties into forecasts. For an example of this, see the JPL paper summarizing prediction and modeling of <a href="http://neo.jpl.nasa.gov/apophis/">the orbit of the asteroid Apophis</a>.</p>
+
+<p>Data series can have unexpected changes, which may change the results of models in unpredictible ways. For instance, US government data series are often adjusted, which means announced results of GDP, inflation, etc may not be reflected in the actual data series. Fortunately, the St. Louis Fed maintains "clean" data series. The <a href="http://research.stlouisfed.org/fred2/">Fred</a> database is useful for some studies, but historical data may be adjusted months after the intial release. If you want the data series exactly the way it was announced, use the <a href="http://research.stlouisfed.org/tips/alfred/">Alfred</a> database.</p>
+
+<p>Join the <a href="https://stat.ethz.ch/pipermail/r-sig-finance/">R Finance list</a> and search for data vendors or sources of data in the archives to find information about high-frequency stock, commodity, or forex data.</p>
+
+<p>Using a more sophisticated statistical model, such as the GLM or robust estimators, is not the answer to known or suspected data problems. And if you want a bit of perspective on regression models, see Freedman's article <a href="http://www.rochester.edu/College/PSC/clarke/204/Freedman91.pdf">Statistical Models and Shoe Leather</a>. I would recommend always scaling your data and use regularization. There are also ways to check your model using data you withhold from the estimation step. This can be used to do determine the "correct" order of polynomial terms in a regression, etc. And then you can use a separate testing data set to make sure your model works out-of-sample. If you want to learn more about this, take Andrew Ng's Coursera class <a href="https://www.coursera.org/course/ml">Machine Learning</a>.</p>
+
+<p>If you have already studied econometrics and <a href="http://www.stanford.edu/~wfsharpe/mia/fac/mia_fac2.htm">factor models</a> (see the <a href="http://en.wikipedia.org/wiki/Fama%E2%80%93French_three-factor_model">Fama-French three-factor model</a> and "<a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1418117">A Better Three Factor Model that Explains More Anomalies</a>"), there are investment banks and hedge funds that run portfolios using such models. They typically use earnings, leverage, and other financial information to create indicators to use in regression models. See <a href="http://epchan.blogspot.com/2006/12/do-factor-models-work-in-short-term.html">Ernie Chan's blog post</a> for some further information.</p>
+
+<p><a href="http://www.coursera.org">Coursera</a> offers free online courses in many topics of interest. A few that may interest you are</p>
+
+<ul>
+<li><p><a href="https://class.coursera.org/compinvesting1-2012-001/class/index">Computational Investing I</a> requires knowledge of Python. I'm taking it Winter 2013.</a></li>
+<li><p><a href="https://www.coursera.org/course/ml">Machine Learning</a> I took this one, it is very interesting.</p></li>
+<li><p><a href="https://www.coursera.org/course/dataanalysis">Data Analysis</a> requires knowledge of R.</p></li>
+<li><p><a href="https://www.coursera.org/course/linearopt">Linear and Discrete Optimization</a> Linear programming can be quite useful, especially when minimizing the L<sub>1</sub> norm.</p></li>
+<li><p><a href="https://www.coursera.org/course/compfinance">Introduction to Computational Finance and Financial Econometrics</a></p></li>
+<li><p><a href="https://www.coursera.org/course/algo">Algorithms: Design and Analysis, Part 1</a></p></li>
+<li><p><a href="https://www.coursera.org/course/fe">Financial Engineering and Risk Management</a></p></li>
+<li><p><a href="https://www.coursera.org/course/macroeconomics">Principles of Macroeconomics</a></p></li>
+<li><p><a href="https://class.coursera.org/compdata-002/class/index">Computing for Data Analysis</a> learn R</p></li>
+</ul>
+
+<p>There are others, so look around. You can always look around for other courses to learn Python or C++ if your school doesn't offer such classes. I don't know of any courses that cover econometrics. I learned Python using the <a href="http://docs.python.org/2/tutorial/">tutorial</a>. Or you can take</p>
+
+<ul>
+<li><p><a href="https://www.coursera.org/course/programming1">Learn to Program - The Fundamentals (Python)</a></p></li>
+<li><p><a href="https://www.coursera.org/course/programming2">Learn to Program - Crafting Quality Code</a></p></li>
+</ul>
+
+<p>Python is a good language to glue together C/C++ programs. You can easily read in data to a Python program and process it easier than in C/C++. C# is good for this also, as long as you write a .NET wrapper for your pure ANSI C/C++ code.</p>
+
+<p>Don't forget to apply late days to quizzes and assignments if you get behind. Time management is important to avoid getting overwhelmed.</p>
+
+<hr />
+
+<p>Please be aware that quite a lot of work has appeared in the past few years related to the use of partial differential equations and lattice/finite difference methods to price securities such as mortgage-backed securities. This method avoids the use of separately estimated prepayment and default models, as the boundary conditions of the PDE problem incorporate the optionality in the mortgage contract. The Libor Market Model is usually implemented using Monte Carlo, but simulations can be very slow indeed. A few papers on the subject are</p>
+
+<ul>
+<li><p>Sharp, N.J., D.P. Newton, and P.W. Duck, "An Improved Fixed-Rate Mortgage Valuation Methodology With Interacting Prepayment and Default Options" Journal of Real Estate Finance and Economics, 2008, volume 36, issue 3, p. 307-342. A good overview is <a href="http://www.ricam.oeaw.ac.at/conferences/fayr07/Talks/Sharp.pdf">http://www.ricam.oeaw.ac.at/conferences/fayr07/Talks/Sharp.pdf</a></p></li>
+<li><p><a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1916369">An Efficient Lattice Algorithm for the Libor Market Model</a>, Tim Xiao.</p></li>
+</ul>
+
+<p>Daniel Duffy recommends against using the Crank-Nicholson method for solving partial differential equations. It is known to have problems when calculating the second derivatives numerically, which is required for risk management purposes. See</p>
+
+<ul>
+<li><p><a href="http://www.datasimfinancial.com/UserFiles/articles/daniel3.pdf">Robust and Accurate Finite Difference Methods in Option Pricing One Factor Models</a></p></li>
+<li><p><a href="http://www.datasimfinancial.com/UserFiles/articles/Handout.ps">Performance and Accuracy Analysis of Integration Schemes for the Black-Scholes Equation</a></p></li>
+</ul>
+
+<p>Duffy's site <a href="http://www.datasimfinancial.com/articles.php">Datasim Financial</a> has other papers of interest as well.
+
+<p>For another look at an interesting technique, go over to the Mathworks web page and view the free webinar "Cointegration and Pairs Trading with Econometrics Toolbox".</p>
+
+<hr />
+
+<h2>Finding A Job</h2>
+
+<p>There are two types of firm, buy-side and sell-side. Sell-side firms include investment banks, and broker-dealers. Anyone else is a buy-side firm. Here are links to the relevant Wikipedia pages.</p>
+
+<ul>
+<li><p><a href="http://en.wikipedia.org/wiki/Investment_bank">Investment Bank</a></p></li>
+<li><p><a href="http://en.wikipedia.org/wiki/Broker-dealer">Broker-dealer</a></p></li>
+<li><p><a href="http://en.wikipedia.org/wiki/Pension_fund">Pension Fund</a></p></li>
+<li><p><a href="http://en.wikipedia.org/wiki/Mutual_fund">Mutual Fund</a></p></li>
+<li><p><a href="http://en.wikipedia.org/wiki/Hedge_fund">Hedge Fund</a></p></li>
+</ul>
+
+<p>Use <a href="http://www.efinancialcareers.com">eFinancialCareers.com</a>. Many recruiters, including company recruiters, search this web site, so be sure to post your resume.</p>
+
+<p>Set up alerts at the job sites run by SIAM, AMS, the CFA Institute, and eFinancialCareers.</p>
+
+<p>You will find math jobs posted on <a href="http://www.dice.com">Dice.com</a>, however the site is directed at IT. It's easy to get trapped into a IT role, which you will find hard to leave. Sometimes it's difficult to avoid this, especially if you have bills to pay and really need a position. In this case, try to minimize its effect on your resume. Don't stay too long in such a position and keep up your knowledge in quantitative analysis by reading the literature and developing models in your spare time. Publishing a paper is a good way to distinguish yourself and indicate interest in the subject.</p>
+
+<p>If you have already studied econometrics and <a href="http://www.stanford.edu/~wfsharpe/mia/fac/mia_fac2.htm">factor models</a>, talk to a recruiter about this. Long/short equity hedge funds often use these types of models.</p>
+
+<p>You can always use the contacts via my <a href="http://www.linkedin.com/pub/dale-smith/7/684/a1b">LinkedIn Profile</a>. There are quite a few recruiters among my contacts. Send them an email and let them know you are looking for a job as a quantitative analyst.</p>
+
+<hr />
+
+<h2>Learning About the Financial Markets</h2>
+
+<p>One way to learn about the financial markets is to take the Level 1 CFA exam. For further information, see the <a href="http://www.cfainstitute.org/cfaprogram/Pages/index.aspx">CFA Program</a> web site. Try to finish the exams early in your career. Having the CFA charter is essential to getting a job on the buy side.</p>
+
+<p>Two sites I try to read regularly are David Merkel's <a href="http://alephblog.com">Alephblog</a> and <a href="http://www.hussmanfunds.com/researchInsight.html">John Hussman's weekly commentary</a>. Both have skin in the game, as it were, as they actively invest on behalf of others. Note that Hussman's Strategic Growth Fund is a long-time holding of mine. To get you started, Merkel maintains a <a href="http://alephblog.com/category/best-articles/">list of "best" articles</a>, and Hussman discusses how he <a href="http://www.hussmanfunds.com/wmc/wmc050418.htm">hedges his stock holdings against market risk</a>.</p>
+
+<hr>
+
+<h2>Quantitative Analysis Books</h2>
+
+<p>Here is a biased list of books on quantitative analysis.</p>
+
+<ul>
+<li><p><a href="http://www.amazon.com/Options-Futures-Derivatives-DerivaGem-Package/dp/0132777428/ref=sr_1_1?s=books&ie=UTF8&qid=1355407478&sr=1-1&keywords=hull+options+futures+and+other+derivatives">Options, Futures, and Other Derivatives</a>. John Hull's book is a good introduction to the subject. It has chapters on every topic you will encounter on Wall Street. It's where I start when researching a topic I've not encountered before or need a refresher.</p></li>
+<li><p><a href="http://www.amazon.com/Financial-Calculus-Introduction-Derivative-Pricing/dp/0521552893/ref=sr_1_1?ie=UTF8&s=books&qid=1262546049&sr=8-1">Financial Calculus: An Introduction to Derivative Pricing</a>. Works thru the discrete time case before introducing the complications of continuous time. I found I understood the Radon-Nikodym Theorem much better after reading this book, and better understood the importance of equivalent measures. My measure theory class in grad school didn't do a good job with these two topics. I found Folland's <a href="http://www.amazon.com/Real-Analysis-Techniques-Applications-Mathematics/dp/0471317160/ref=sr_1_2?ie=UTF8&qid=1355421305&sr=8-2&keywords=folland+measure+theory">Measure Theory</a> book to be much better than Royden or Rudin. Folland has two chapters on topology that are really very good, as well as good chapters on Fourier Analysis, distributions, Sobolev spaces, and partial differential equations.</p></li>
+<li><p><a href="http://www.amazon.com/Stochastic-Differential-Equations-Introduction-Applications/dp/3540047581/ref=pd_sim_b_11">Stochastic Differential Equations: An Introduction with Applications</a>. The theory behind the Black-Scholes model for options pricing.</p></li>
+<li><p><a href="http://www.amazon.com/Quant-Job-Interview-Questions-Answers/dp/143821703X/ref=pd_sim_b_60">Quant Jobs Questions and Answers</a>. To get a flavor of the questions you may be asked on an interview.</p></li>
+<li><p><a href="http://www.amazon.com/Monte-Carlo-Methods-Finance-Jaeckel/dp/047149741X/ref=sr_1_1?ie=UTF8&s=books&qid=1262546844&sr=1-1">Monte Carlo Methods in Finance</a>.</p></li>
+<li><p><a href="http://www.amazon.com/Paul-Wilmott-Quantitative-Finance-Set/dp/0470018704/ref=pd_sim_b_4">Paul Wilmott on Quantitative Finance</a></p></li>
+<li><p><a href="http://www.amazon.com/Quantitative-Trading-Build-Algorithmic-Business/dp/0470284889/ref=sr_1_1?ie=UTF8&s=books&qid=1262546958&sr=1-1">Quantitative Trading: How to Build Your Own Algorithmic Trading Business</a>.</p></li>
+<li><p><a href="http://www.amazon.com/Evidence-Based-Technical-Analysis-Scientific-Statistical/dp/0470008741/ref=sr_1_1?ie=UTF8&s=books&qid=1262547012&sr=1-1">Evidence-Based Technical Analysis: Applying the Scientific Method and Statistical Inference to Trading Signals</a>. Technical analysis is highly prone to confirmation bias. This book is a welcome breath of fresh air.</p></li>
+<li><p><a href="http://www.amazon.com/Econometrics-Financial-Markets-John-Campbell/dp/0691043019/ref=sr_1_1?ie=UTF8&s=books&qid=1262547543&sr=1-1">The Econometrics of Financial Markets</a>.</p></li>
+<li><p><a href="http://www.amazon.com/Non-Random-Walk-Down-Wall-Street/dp/0691092567/ref=sr_1_1?ie=UTF8&s=books&qid=1263148911&sr=8-1">A Non-Random Walk Down Wall Street</a>.</p></li>
+</ul>
+
+<p>As always, make sure you get the latest editions.</p>
+
+<hr />
+<address>
+<p>Last updated January 17, 2013. Nothing on these pages should be taken as a solicitation to buy or sell any securities mentioned here. The author, Dale T. Smith, is not a registered investment advisor, registered representative, or licensed as a commodity pool operator. All investments have some risk, even 30-day Treasury bills (eg interest rate risk), so please make sure you understand the risks involved before making any investment. These pages (except those I got from others) are Copyright &#169 1996-2013 by Dale T. Smith. All rights reserved.<br><br>
+URL: <a href="http://dtsmith.home.mindspring.com/">http://dtsmith.home.mindspring.com/</a>
+</address>
+</body>
+</html>
